@@ -88,13 +88,19 @@
 </body>
   <script>
    {
-    const a = prompt('Введите 5')
-    ParseInt(a);
+   let a = 5;
     while (a <= 10) {
-      a = a + 1
+    a = a + 1;
+    if (a > 10) {
+        console.log("а > 10");
+          break;
+        }
+      }
     }
-    alert(`${a} > 10`)
-  }
   </script>
 
+</body>
+<script>
+
+</script>
 </html>
