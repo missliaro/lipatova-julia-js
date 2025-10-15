@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let userName = prompt(`Кто ты?`)
+
+    if (userName === `Админ`) {
+
+      let pass = prompt(`Пароль?`);
+
+      if (pass === `Я главный`) {
+        alert(`Здравствуйте!`);
+      } else if (pass === "" || pass === null) {
+        alert(`Отменено`);
+      } else {
+        alert(`Неверный пароль`)
+      }
+    } else if (userName === "" || userName === null) {
+      alert(`Отменено`);
+    } else {
+      alert(`Я вас не знаю`)
+    }
+  </script>
+  <script>
+    let num1 = 10,
+      num2 = 20,
+      result;
+    result ??= num1 ?? num2;
+  </script>
+  <script>
+    for (let i = 2; i <= 10; i++) {
+      if (i % 2 == 0) {
+        alert(i)
+      }
+    }
+  </script>
+  <script>
+    let i = 0;
+    while (i < 3) {
+      alert(`number ${i}!`);
+      i++;
+    }
+  </script>
+  <script>
+    let num;
+    do {
+      num = prompt(`Введите число больше 100?`, 0);
+    } while (num <= 100 && num);
+  </script>
+  <script>
+    let n = 10;
+    nextPrime:
+    for (let i = 2; i <= n; i++) {
+      for (let j = 2; j < i; j++) {
+        if (i % j == 0) continue nextPrime;
+      } alert(i);
+    }
+
+  </script>
+
+  <script>
+
+    let a = 5;
+    a = prompt(`Введите число`)
+    while (a <= 10) {
+      a++;
+      if (a > 10) {
+        alert(`a > 10`)
+      }
+    }
+  </script>
+</body>
+</html>
