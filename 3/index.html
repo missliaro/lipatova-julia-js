@@ -24,8 +24,8 @@
 <script>
   const a_string = prompt(`Введите а`);
   const b_string = prompt(`Введите b`);
-  const a = Number(a_string)
-  const b = Number(b_string)
+  const a = number(a_string)
+  const b = number(b_string)
   if (a > b) {
     alert(`Вывод: больше а`)
   } else {
@@ -34,12 +34,12 @@
 </script>
 
 <script>
-  const NAME = prompt(`Введите имя`);
-  if (NAME.length == 0) {
+  const name = prompt(`Введите имя`);
+  if (name.length == 0) {
     alert(`Имя пустое`);
-  } else if (NAME.length < 2) {
+  } else if (name.length < 2) {
     alert(`Имя слишком короткое`);
-  } else if (NAME.length > 50) {
+  } else if (name.length > 50) {
     alert(`Имя слишком длинное`);
   } else {
     alert(`Отлично!`);
@@ -87,20 +87,21 @@
   </script>
 </body>
   <script>
-   {
-   let a = 5;
+  {
+    let a = 5;
+    a = prompt(`Введите число`)
     while (a <= 10) {
-    a = a + 1;
-    if (a > 10) {
+      a++;
+      if (a > 10) {
         console.log("а > 10");
-          break;
-        }
+        break;
       }
     }
+  }
   </script>
-
 </body>
 <script>
-
+ 
+  
 </script>
 </html>
