@@ -7,24 +7,31 @@
 </head>
 <body>
   <script>
-  {
-    let a = 5;
-    
-    while (a <= 10) {
-      a++;
-      if (a > 10) {
-      console.log("а > 10");
-        break;
-      }
+  
+  const names = ["Илон", "Павел", "Джефф", "Евгений", "Билл"];
+    for (let i = 0; i < 3; i++) {
+      let name = prompt(`Введите имя ${i + 1}:`)
+      names.push(name);
     }
-  }
-  </script>
- 
-  <script>
+    console.log(names);
     
   </script>
 
   <script>
+  const matrix = [
+    [64, 362, 35, 786, 53],
+    [73, 87, 0, 80, 367],
+    [98, 457, 76, 21, 36],
+    [64, 1, 765, 534, 26],
+    [27, 852, 14, 98, 60] 
+    ];
+    let totalProduct = 1;
+    for (let row of matrix) {
+      or(let j = 0; j < row.length; j += 2) {
+      totalProduct *= row[j]
+    }
+  }
+  console.log(totalProduct);
   </script>
 
   <script>
