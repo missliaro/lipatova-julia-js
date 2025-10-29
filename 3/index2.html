@@ -28,16 +28,29 @@
     let totalProduct = 1;
     for (let row of matrix) {
       or(let j = 0; j < row.length; j += 2) {
-      totalProduct *= row[j]
+      totalProduct *= row[j];
     }
   }
   console.log(totalProduct);
   </script>
 
   <script>
+  function pam (array, callback) {
+   const newArray = [];
+   for (let i = 0; i < array.length; i++) {
+     const result = callback(array[i], i, array);
+      newArray.push(result);
+   }
+   return newArray;
+  }
   </script>
 
   <script>
-  </script>
+
+</script>
+
+<script>
+
+</script>
 </body>
 </html>
