@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const readline = require('readline');
+
+      // Создаем один интерфейс для всего приложения
+      const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+      });
+
+      // Функция для вопроса с промисом
+      function askQuestion(question) {
+        return new Promise((resolve) => {
+          rl.question(question, resolve);
+        });
+      }
+
+      // Проверка email
+      async function inputEmail() {
+        while (true) {
+          const email = await askQuestion('Введите ваш email: ');
+          const emailRegex = /^[a-zA-Z0-9.-]+@[a-zA-Z]+\.[a-zA-Z]{2,6}$/;
+
+          if (emailRegex.test(email)) {
+            console.log('✓ Email корректен');
+            return email;
+          } else {
+            console.log('❌ Ошибка: Неверный формат email');
+            console.log('Пример: user.name-123@example.com');
+          }
+        }
+      }
+
+      // Проверка города
+      async function inputCity() {
+        while (true) {
+          const city = await askQuestion('Введите ваш город: ');
+          const cityRegex = /^[a-zA-Zа-яА-ЯёЁ\s-]{2,}$/;
+
+          if (cityRegex.test(city) && !/\d/.test(city)) {
+            console.log('✓ Город корректен');
+            return city;
+          } else {
+            console.log('❌ Ошибка: Неверный формат города');
+            console.log('Допустимы только буквы, пробелы и дефисы (минимум 2 символа)');
+          }
+        }
+      }
+
+      // Главная функция
+      async function main() {
+        console.log('=== Проверка ввода данных ===\n');
+
+        try {
+          const email = await inputEmail();
+          console.log(`Введенный email: ${email}\n`);
+
+          const city = await inputCity();
+          console.log(`Введенный город: ${city}\n`);
+
+          console.log('=== Все данные успешно получены ===');
+          console.log(`Email: ${email}`);
+          console.log(`Город: ${city}`);
+
+        } catch (error) {
+          console.log('Произошла ошибка:', error);
+        } finally {
+          rl.close();
+        }
+      }
+
+      // Запускаем программу
+      main();
+  </script>
+</body>
+</html>
