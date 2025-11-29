@@ -1,4 +1,4 @@
-<script>
+
   const fs = require('fs');
   const readline = require('readline');
 
@@ -45,7 +45,7 @@
 
   main();
 
-</script>
+
   
 
 
