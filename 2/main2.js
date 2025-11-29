@@ -1,4 +1,4 @@
-<script>
+
  const readline = require('readline');
 
   // Создаем один интерфейс для всего приложения
@@ -69,4 +69,3 @@
   }
 
   main();
-  </script>
