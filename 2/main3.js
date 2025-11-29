@@ -1,4 +1,4 @@
-<script>
+
   class Boat {
     constructor(color, material, maxSpeed) {
       this.color = color;
@@ -56,4 +56,3 @@ class Bus extends Transport {
 
       const myPlane = new Plane();
       myPlane.startEngine(); // Турбины запускаются...
-  </script>
