@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  class Boat {
+    constructor(color, material, maxSpeed) {
+      this.color = color;
+      this.material = material;
+      this.maxSpeed = maxSpeed;
+    }
+
+    sail() {
+      console.log("Плывём по волнам!");
+    }
+  }
+  class Transport {
+    startEngine() {
+        console.log("Двигатель запускается...");
+    }
+}
+
+class Bus extends Transport {
+    constructor(passengerCount) {
+        super();
+        this.passengerCount = passengerCount;
+    }
+
+    drive() {
+        console.log(`Едем по маршруту с ${this.passengerCount} пассажирами`);
+    }
+}
+  class Transport {
+    startEngine() {
+      console.log("Двигатель запускается...");
+    }
+  }
+
+  class Bus extends Transport {
+    constructor(passengerCount) {
+      super();
+      this.passengerCount = passengerCount;
+    }
+
+    drive() {
+      console.log(`Едем по маршруту с ${this.passengerCount} пассажирами`);
+    }
+  }
+  class Plane extends Transport {
+      startEngine() {
+        console.log("Турбины запускаются...");
+      }
+    }
+
+    const myBoat = new Boat('blue', 'plastic', 25);
+      myBoat.sail(); // Плывём по волнам!
+
+      const myBus = new Bus(34);
+      myBus.drive(); // Едем по маршруту с 34 пассажирами
+
+      const myPlane = new Plane();
+      myPlane.startEngine(); // Турбины запускаются...
+  </script>
+</body>
+</html>
