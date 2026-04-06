@@ -1,0 +1,181 @@
+@font-face {
+  font-family: "robo";
+  src: url(../fonts/Rubik_Moonrocks/RubikMoonrocks-Regular.ttf);
+}
+
+@font-face {
+  font-family: "roboH";
+  src: url(../fonts/Rubik_Moonrocks/PressStart2P-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: 0.5s;
+  font-family: "robo";
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #151c39;
+  padding: auto;
+}
+
+.header-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 80px;
+}
+
+nav a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+nav a:hover {
+  transform: translate(-6px);
+}
+
+main {
+  background: url(../img/img/banner-bg.jpg) center;
+  background-size: cover;
+  height: 600px
+}
+
+.main-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  gap: 40px;
+}
+
+.main-text h2 {
+  font-family: "roboH";
+  font-size: 40px;
+}
+
+.main-text span {
+  font-size: 30px;
+  padding: 3px;
+}
+
+ .cards {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.cards {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.cards-block {
+display: flex;
+justify-content: space-between;
+padding: 40px 0;
+
+}
+
+.card {
+width: 300px;
+box-shadow: 0px 0px 10px ;
+padding: 20px;
+}
+
+.card p {
+ padding: 10px;
+ font-family: roboH;
+ font-size: small;
+}
+
+.card h3 {
+  font-family: roboH;
+  font-size: medium;
+}
+
+.card a {
+  display: inline-block;
+  background-color: #151c39;
+  color: white;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 10px; 
+border: 1px solid #151c39;
+}
+
+.card a:hover{
+  background-color: transparent;
+  color: #151c39;
+}
+
+footer {
+background: url(../img/img/footer-bg.jpg);
+background-size: cover;
+padding: 120px 0;
+color: white;
+}
+
+.footer-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-forma label {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+input[type="email"] {
+padding: 10px;
+border-radius: 10px;
+}
+
+input[type="submit"] {
+  padding: 10px 5px ;
+  border-radius: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  transform: scale(1.1);
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+
+}
+
+.footer-social img {
+  width: 80px;
+  cursor: pointer;
+}
+
+.footer-social img:hover {
+  transform: rotate(360deg);
+}
