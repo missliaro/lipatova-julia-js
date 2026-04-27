@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Практика 15</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <!--  1: Удаление профиля -->
+    <div class="block">
+      <h2>Задача 1: Удаление профиля</h2>
+      <button id="deleteBtn" class="btn-red">Удалить профиль</button>
+    </div>
+  
+    <!-- 2: Галерея (одна и та же картинка, но CSS управляет размером) -->
+    <div class="block">
+      <h2>Задача 2: Галерея</h2>
+      <div class="gallery" id="gallery">
+        <img class="gallery-img" src="Галерея/корги"
+          data-full="Галерея/Корги">
+        <img class="gallery-img" src="Галерея/сюрприз"
+          data-full="Галерея/сюрприз">
+        <img class="gallery-img" src="Галерея/собака_с_бровями"
+          data-full="Галерея/собака_с_бровями">
+      </div>
+      
+    </div>
+  
+    <!-- 3: Форма подписки -->
+    <div class="block">
+      <h2>Задача 3: Подписка</h2>
+      <button id="openFormBtn">Открыть форму</button>
+    </div>
+  </div>
+  
+  <script>
+    // Общ функции
+    let currentModal = null;
+
+    function closeModal() {
+      if (currentModal) {
+        currentModal.remove();
+        currentModal = null;
+      }
+    }
+
+    function openModal(htmlContent, closeOnOverlay = false) {
+      closeModal();
+
+      const overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+
+      const modal = document.createElement('div');
+      modal.className = 'modal-window';
+      modal.innerHTML = htmlContent;
+
+      overlay.appendChild(modal);
+      document.body.appendChild(overlay);
+      currentModal = overlay;
+
+      if (closeOnOverlay) {
+        overlay.addEventListener('click', function (e) {
+          if (e.target === overlay) {
+            closeModal();
+          }
+        });
+      }
+
+      return modal;
+    }
+
+    //  1 
+    document.getElementById('deleteBtn').addEventListener('click', function () {
+      const modalContent = `
+              <p>Вы уверены?</p>
+              <div class="modal-actions">
+                  <button id="cancelBtn">Отмена</button>
+                  <button id="confirmBtn" style="background: #dc2626; color: white; border: none; padding: 6px 12px;">Да, удалить</button>
+              </div>
+          `;
+
+      const modal = openModal(modalContent, false);
+
+      document.getElementById('cancelBtn').addEventListener('click', closeModal);
+      document.getElementById('confirmBtn').addEventListener('click', function () {
+        console.log("Профиль удален");
+        closeModal();
+      });
+    });
+
+    //  2 (делегирование + единая картинка) 
+    document.getElementById('gallery').addEventListener('click', function (e) {
+      const img = e.target.closest('.gallery-img');
+      if (!img) return;
+
+      // Берём ту же самую картинку 
+      const imageUrl = img.getAttribute('data-full');  // или img.src
+
+      // В модалке картинка будет большой благодаря CSS .modal-img
+      const modalContent = `
+              <img class="modal-img" src="${imageUrl}" alt="Увеличенное изображение">
+              <br><br>
+              <button id="closeGalleryBtn">Закрыть</button>
+          `;
+
+      const modal = openModal(modalContent, true);  // true — можно закрыть по клику на фон
+
+      document.getElementById('closeGalleryBtn').addEventListener('click', closeModal);
+    });
+
+    //  3 
+    document.getElementById('openFormBtn').addEventListener('click', function () {
+      const modalContent = `
+              <h3 style="margin-bottom: 15px;">Подписка</h3>
+              <input type="email" id="emailInput" class="email-input" placeholder="Введите Email">
+              <button id="subscribeBtn" class="btn-subscribe">Подписаться</button>
+              <button id="cancelFormBtn" style="margin-top: 10px; width: 100%;">Отмена</button>
+          `;
+
+      const modal = openModal(modalContent, true);
+
+      const emailInput = document.getElementById('emailInput');
+      const subscribeBtn = document.getElementById('subscribeBtn');
+      const cancelBtn = document.getElementById('cancelFormBtn');
+
+      // stopPropagation для клика внутри модалки
+      modal.addEventListener('click', function (e) {
+        e.stopPropagation();
+      });
+
+      subscribeBtn.addEventListener('click', function () {
+        const email = emailInput.value.trim();
+
+        if (email === "") {
+          emailInput.classList.add('error');
+          return;
+        }
+
+        console.log("Успех!");
+        closeModal();
+      });
+
+      cancelBtn.addEventListener('click', closeModal);
+
+      // Убираем ошибку при вводе
+      emailInput.addEventListener('input', function () {
+        emailInput.classList.remove('error');
+      });
+    });
+  </script>
+</body>
+</html>
