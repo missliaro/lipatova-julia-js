@@ -1,0 +1,254 @@
+@font-face {
+  font-family: "Inter";
+  src: url(../font/Inter/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: 0.5s;
+  font-family: "Inter";
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.button-style {
+  display: inline-block;
+  color: white;
+  background-color: #2E4FD7;
+  font-size: 16px;
+  padding: 15px 25px;
+  border: 1px solid #2E4FD7;
+}
+
+.button-style:hover {
+  background-color: transparent;
+  color: #2E4FD7;
+}
+
+/* Start header */
+.header-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  background-color: white;
+  padding: 40px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: black;
+  font-size: 16px;
+  transition: 0.5px;
+}
+
+nav a:hover {
+  color: #46BA71;
+}
+
+/* End header */
+
+/* start main */
+.main-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 0;
+}
+
+.main-text {
+  max-width: 635px;
+}
+
+.main-text h1 {
+  font-size: 64px;
+  letter-spacing: -1.16;
+  line-height: 72px;
+  font-family: "Inter";
+}
+
+.main-text p {
+  font-size: 20px;
+  letter-spacing: -0.36px;
+  line-height: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  max-width: 470px;
+}
+
+/* end main */
+
+/* start advantages */
+.section-title {
+  font-size: 52px;
+  font-weight: bold;
+  line-height: 62px;
+  letter-spacing: 0.94px;
+  margin-bottom: 50px;
+}
+
+.advantages-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+
+}
+
+.advantage-card {
+  display: flex;
+  gap: 40px;
+  max-width: 530px;
+}
+
+/* end advantages */
+
+/* start catalog  */
+.catalog-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px;
+
+}
+
+.catalog-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 352px;
+}
+
+
+
+.catalog-text h3 {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 62px;
+  letter-spacing: 0.94px;
+}
+
+.catalog-text p {
+  font-size: 23px;
+  letter-spacing: 0.94px;
+
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+
+.price {
+  color: #2E4FD7;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.price span {
+  font-size: 19px;
+}
+
+/* end catalog */
+
+/* start section brands  */
+.brands {
+  background-color: #E7EBFC;
+  max-height: 660px;
+  margin: 0 auto;
+  margin-top: 105px;
+  text-align: center;
+}
+
+.title {
+  margin: 0 auto;
+  font-size: 52px;
+  font-weight: bold;
+  line-height: 62px;
+  letter-spacing: -0.94px;
+  padding-top: 100px;
+  max-width: 920px;
+}
+
+.brands p {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 820px;
+  padding: 24px 0 60px 0;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.32px;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.12);
+  margin: 42px auto 57px;
+}
+
+.brands-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 94px;
+}
+
+/* end section brands */
+
+/* start footer  */
+footer {
+  color: white;
+  background-color: #2E4FD7;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 126px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav-footer {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 16px;
+}
+
+.nav-footer a {
+  color: white;
+  letter-spacing: -0.29px;
+}
+
+.FAQ {
+  font-size: 16px;
+  letter-spacing: -0.29px;
+}
+
+/* end footer */

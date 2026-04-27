@@ -1,0 +1,218 @@
+ @font-face {
+   font-family: "Fraunces";
+   src: url(../fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+ }
+
+ @font-face {
+   font-family: "Inter";
+   src: url(../fonts/Inter/Inter-VariableFont_opsz\,wght.ttf);
+ }
+
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+   transition: 0.5s;
+   font-family: "inter";
+ }
+
+ .container {
+   width: 1200px;
+   padding: 0 20px;
+   margin: 0 auto;
+
+ }
+
+ .header-block {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+
+ header {
+   background-color: white;
+   padding: 20px 0;
+ }
+
+ .logo {
+   display: flex;
+   align-items: center;
+   gap: 24px;
+ }
+
+ .logo img {
+   margin: 20px;
+   height: 37px;
+   width: auto;
+ }
+
+ nav {
+   display: flex;
+   gap: 24px;
+ }
+
+ nav a {
+   color: black;
+   font-size: 15px;
+   transition: 0, 5s;
+   gap: 30px;
+ }
+
+ nav a:hover {
+   color: #006B99;
+ }
+
+ .inputs {
+   display: flex;
+   gap: 20px;
+   align-items: center;
+ }
+
+ .signin {
+   color: #006B99;
+   font-size: 15px;
+   padding: 10px 20px;
+   border: 1px solid transparent;
+ }
+
+ .signin:hover {
+   border: 1px solid #006B99;
+ }
+
+ .demo {
+   color: white;
+   background-color: #006B99;
+   padding: 10px 20px;
+   font-size: 15px;
+   transition: 0, 5s;
+   border: 1px solid #006B99;
+ }
+
+ .demo:hover {
+   background-color: transparent;
+   color: #006B99;
+ }
+
+ main {
+   background-size: cover;
+   height: 600px;
+ }
+
+ .main-block {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   padding: 100px 0;
+
+ }
+
+ .main-text {
+   width: 600px;
+   height: 100%;
+   line-height: 1/5;
+ }
+
+ .main-text label {
+   font-family: "Fraunces";
+   font-size: 58px;
+ }
+
+ .main-text p {
+   font-size: 20px;
+   margin: 24px 0;
+ }
+
+ .main-input {
+   display: flex;
+   gap: 20px;
+   align-items: center;
+ }
+
+ .bookdemo {
+   color: white;
+   background-color: #006B99;
+   padding: 10px 20px;
+   font-size: 15px;
+   transition: 0, 5s;
+   border: 1px solid #006B99;
+ }
+
+ .bookdemo:hover {
+   background-color: transparent;
+   color: #006B99;
+ }
+
+ .learn {
+   color: #006B99;
+   font-size: 15px;
+   padding: 10px 20px;
+   border: 1px solid transparent;
+ }
+
+ .learn:hover {
+   border: 1px solid #006B99;
+ }
+
+ .info {
+   display: flex;
+   align-items: center;
+   gap: 24px;
+   flex-direction: column;
+   margin-bottom: 154px;
+ }
+
+ .text p {
+   font-family: "Inter";
+   font-size: 24px;
+   line-height: 37.5px;
+   color: #1F1F1F;
+ }
+
+ .partners {
+   display: flex;
+   gap: 60px;
+ }
+
+ .cards {
+   display: flex;
+   justify-content: center;
+   gap: 32px;
+   margin-bottom: 29px;
+   flex-wrap: wrap;
+ }
+
+ .card {
+   width: 355px;
+   height: 250px;
+   padding: 32px;
+   padding-bottom: 40px;
+ }
+
+ .card h1 {
+   margin-top: 8px;
+   margin-bottom: 11px;
+   font-family: "Fraunces";
+   font-size: 25px;
+   font-weight: 400;
+   line-height: 31.25px;
+ }
+
+ .card p {
+   width: 291px;
+   font-family: "Inter";
+   font-size: 15px;
+   line-height: 24px;
+ }
+
+ .card1 {
+   background-color: #FAEA73;
+ }
+
+ .card2 {
+   background-color: #CCEFF6;
+ }
+
+ .card3 {
+   background-color: #F7CEDC;
+ }

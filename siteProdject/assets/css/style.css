@@ -1,0 +1,289 @@
+/* Подключение шрифта */
+@font-face {
+  font-family: 'GardensC';
+  src: url(../fonts/GardensC.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: 0.5s;
+  font-family: 'GardensC', 'Arial', 'Helvetica', 'sans-serif';
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ddd;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.top {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  background-color: #b451c4;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.top img {
+  width: 40px;
+  height: 40px;
+}
+
+.top-img:hover {
+  transform: scale(1.1)
+}
+
+.py-120 {
+  padding: 120px 0;
+}
+
+.title {
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+.title h2 {
+  font-size: 35px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.title p {
+  font-size: 20px;
+  padding-bottom: 50px;
+  color: #595858;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #b451c4;
+  color: white;
+  border-radius: 15px;
+  border: 1px solid #b451c4;
+}
+
+.btn:hover {
+  background: transparent;
+  color: #b451c4;
+}
+
+/* Начало шапки */
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 0 10px #cbcaca;
+  z-index: 999;
+}
+
+.header-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.header-block img {
+  width: 10%;
+}
+
+.header-block nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header-block nav a {
+  color: black;
+  position: relative;
+}
+
+.header-block nav a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: black;
+  transition: 0.3s;
+}
+
+.header-block nav a:hover::after {
+  width: 100%;
+}
+
+.nav-items img {
+  width: 30px;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-items a:hover {
+  transform: scale(1.1) translateY(-10px);
+}
+
+/* Конец шапки */
+
+/* Начало баннера */
+main {
+  margin-top: 70px;
+  height: 95vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-text {
+  background-color: #0b0b0b4a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+.main-text a {
+  display: block;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Конец баннера */
+
+/* Начало блока О нас */
+.about {
+  background-color: white;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-content h3 {
+  font-size: 20px;
+}
+
+.about-content p {
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 20px 0;
+}
+
+/* Конец блока О нас  */
+
+/* Начало блока акции */
+.promotions-block {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.promo {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 5px 1px #878686;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.promo:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.promo h3 {
+  font-size: 35px;
+
+}
+
+.promo p {
+  font-style: 18px;
+  line-height: 1.5;
+
+}
+
+.promo img {
+  width: 380px;
+  height: 285px;
+  object-fit: cover;
+}
+
+.promo-text {
+  padding: 0 20px;
+}
+
+.promo-p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+/* Конец блока акции */
+
+/* Начало блока forma */
+.forma {
+  background: linear-gradient(rgb(0, 0, 0,  0.401), rgb(0, 0, 0, 600)), url(../image/form/email.jpg), center, fixed;
+  background-size: cover;
+  margin-bottom: 100px;
+  padding: 100px 40px;
+  border-radius: 50px;
+  color: white
+}
+
+.forma-block {
+  padding: 40px 0 10px 0;
+}
+
+input[type="email"] {
+  padding: 10px;
+  outline: none;
+}
+
+input[type="email"]:focus {
+  color: #b451c4;
+  border-color: #b451c4;
+}
+
+button[type="submit"] {
+  padding: 10px;
+  color: #b451c4;
+  border-color: #b451c4;
+}
+/* Конец блока forma */
+
+/* Начало блока footer  */
+
+/* Конец блока footer */
